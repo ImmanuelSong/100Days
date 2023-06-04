@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  background: #f08308;
+}
+
+.wrapper {
+  height: 50vh;
+  width: 70vw;
+  border-radius: 15px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+.goal span {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.buttons {
+  width: 30vw;
+  height: 8vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn {
+  width: 40%;
+  height: 80%;
+  background-color: #ffffff;
+  color: #f08308;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.blur {
+  filter: blur(0.7rem);
+}
+
+.window {
+  width: 50vw;
+  height: 40vh;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  position: absolute;
+  top: 50;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.window-hidden {
+  display: none;
+}
+
+.result {
+  color: #fff;
+}
+
+.replay-button {
+  background: transparent;
+  border: 1px solid white;
+  height: 10%;
+  width: 20%;
+  color: #fff;
+  cursor: pointer;
+}

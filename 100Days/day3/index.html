@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Day3 Stop the Watch game</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Stop the Watch Game</h1>
+      <div class="goal">
+        <span>Goal Time : </span><span class="goal-time">00:00</span>
+      </div>
+      <div class="result">
+        <span class="result-time">00 : 00</span>
+      </div>
+      <div class="buttons">
+        <button class="start-button btn">Start</button>
+        <button class="reset-button btn hidden">Reset</button>
+        <button class="stop-button btn">Stop</button>
+      </div>
+    </div>
+    <div class="window window-hidden">
+      <h2>YOU LOSE</h2>
+      <span>TIME DIFFERENCE</span>
+      <button class="replay-button">Replay</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
