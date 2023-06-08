@@ -1,0 +1,24 @@
+body {
+  display: grid;
+  margin: 0;
+  place-content: center;
+  grid-auto-flow: column;
+  gap: 30px;
+  min-height: 100vh;
+  background: #e68021;
+}
+
+img {
+  width: 300px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  clip-path: inset(0 10% 0 0 round 10px);
+  transform: perspective(400px) var(--x, rotateY(10deg));
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+img:hover {
+  clip-path: inset(0 0 0 10% round 10px);
+  --x: translateX(-10%) rotateY(-10deg);
+}
