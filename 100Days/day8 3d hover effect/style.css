@@ -22,3 +22,7 @@ img:hover {
   clip-path: inset(0 0 0 10% round 10px);
   --x: translateX(-10%) rotateY(-10deg);
 }
+
+.hidden {
+  display: none;
+}
