@@ -20,9 +20,9 @@ const Home = () => {
   }, []);
   console.log(movies);
   return (
-    <div>
+    <div className="flex items-center flex-wrap gap-[100px] w-[900px] mx-auto">
       {loading ? (
-        <h1>Loading..</h1>
+        <div></div>
       ) : (
         movies.map((movie) => (
           <Movie

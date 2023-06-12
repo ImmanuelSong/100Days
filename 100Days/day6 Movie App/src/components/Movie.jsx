@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 
 const Movie = ({ id, coverImage, title, summary, genres }) => {
   return (
-    <div>
-      <img src={coverImage} alt={title} />
-      <h2>
-        <Link to={`/movie/${id}`}>{title}</Link>
-      </h2>
-      <p>{summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}</p>
-      <ul>
-        {genres.map((g) => (
-          <li key={g}>{g}</li>
-        ))}
-      </ul>
-    </div>
+    <Link to={`/movie/${id}`}>
+      <div className="group w-[400px] h-[400px] shadow-lg rounded-lg translate-y-[180px] bg-white hover:scale-110 transition-all ease-out delay-200">
+        <img
+          src={coverImage}
+          alt={title}
+          className="mx-auto rounded-md -translate-y-8"
+        />
+        <div className="text-center text-lg  transition-all ease-out delay-200 group-hover:font-bold group-hover:scale-110">
+          {title}
+        </div>
+      </div>
+    </Link>
   );
 };
 
