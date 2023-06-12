@@ -8,7 +8,7 @@ import mist from "./images/mist.png";
 import rain from "./images/rain.png";
 import snow from "./images/snow.png";
 
-const api = "82c677021bf925efb5d63d7bd94e7a96";
+const api = "YOURAPI";
 
 const WeatherBox = (city) => {
   const [weatherData, setWeatherData] = useState([]);
