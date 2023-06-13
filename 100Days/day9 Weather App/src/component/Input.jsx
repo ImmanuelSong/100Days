@@ -14,17 +14,11 @@ const Input = () => {
     setInput("");
   };
 
-  const handleClick = () => {
-    setCitySet(false);
-    setCity("");
-    setInput("");
-  };
-
   return (
     <div className="flex flex-col gap-5 items-center justify-center">
       <form onSubmit={handleSubmit} className="flex justify-between gap-2">
         <input
-          className="w-[90%] h-[40px] shadow-lg uppercase rounded-lg pr-3 text-center border-2 text-red-400 placeholder-red-300 border-red-300 focus:outline-none focus:border-red-500 caret-red-400"
+          className="w-[90%] h-[40px] shadow-lg uppercase rounded-lg pr-3 text-center border-2 text-emerald-700 placeholder-emerald-300 border-emerald-300 focus:outline-none focus:border-emerald-500 caret-emerald-400"
           type="text"
           placeholder="Enter a city name..."
           value={input}
@@ -33,7 +27,7 @@ const Input = () => {
           }}
         />
         <button type="submit" onClick={handleSubmit}>
-          <HiRocketLaunch className="text-[30px] text-red-500 hover:scale-125 transition-all ease duration-500" />
+          <HiRocketLaunch className="text-[30px] text-emerald-500 hover:scale-110 transition-all ease duration-200" />
         </button>
       </form>
       {citySet ? <WeatherBox city={city} /> : null}
