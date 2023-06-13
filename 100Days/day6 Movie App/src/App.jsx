@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <div className="mx-auto bg-blue-50">
+    <div className="mx-auto bg-orange-50">
       <Router>
         <NavBar />
         <Routes>

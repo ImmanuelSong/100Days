@@ -24,17 +24,26 @@ const Detail = () => {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <div className="h-full w-full flex justify-center items-center mt-[140px] flex-col bg-blue-50">
-          <h1 className="text-2xl">
-            Details of <span className="text-3xl font-bold">{movie.title}</span>
+        <div className="h-screen w-screen relative flex justify-center items-center pt-[100px] flex-col bg-orange-50">
+          <img
+            src={movie.background_image_original}
+            alt=""
+            className=" h-[90%] w-4/6  aspect-auto blur-sm absolute top-12 z-1 "
+          />
+          <h1 className="text-2xl z-10">
+            <span className="text-4xl  bg-clip-text text-transparent font-bold  bg-gradient-to-r from-orange-300 to-orange-700">
+              {movie.title}
+            </span>
           </h1>
           <img
             src={movie.medium_cover_image}
             alt={movie.title}
-            className="w-[250px] aspect-auto rounded-lg mt-5"
+            className="w-[250px] aspect-auto rounded-lg mt-5 z-10 shadow-md shadow-white"
           />
-          <div className="w-[600px] bg-white border-none rounded-lg shadow-md mt-3">
-            <p className="text-md">{movie.description_full}</p>
+          <div className="w-[600px] h-[100px] bg-white border-none rounded-lg shadow-md mt-3 z-10 p-2 overflow-hidden">
+            <p className="text-md m-0 p-0 text-justify">
+              {movie.description_full}
+            </p>
           </div>
         </div>
       )}
