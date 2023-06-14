@@ -85,6 +85,7 @@ const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const [show, setShow] = useState(false);
   const [currentMove, setCurrentMove] = useState(0);
+  const [reverse, setReverse] = useState(false);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
 
@@ -111,6 +112,7 @@ const Game = () => {
       </li>
     );
   });
+
   return (
     <div className="game">
       <div className="game-board">
@@ -119,7 +121,8 @@ const Game = () => {
       <div className="game-info">
         <p>Current Move is at {history.length - 1}</p>
         <button onClick={() => setShow(!show)}>History</button>
-        {show ? <ol>{moves}</ol> : null}
+        <button onClick={() => setReverse(!reverse)}>Reverse</button>
+        {!show ? null : reverse ? <ol>{moves.reverse()}</ol> : <ol>{moves}</ol>}
       </div>
     </div>
   );
